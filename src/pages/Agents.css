@@ -1,0 +1,544 @@
+/* =========================================
+   AGENTS PAGE
+========================================= */
+
+.agents-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #111827;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.agents-hero {
+  position: relative;
+
+  padding: 145px 24px 95px;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(37, 99, 235, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(59, 130, 246, 0.08),
+      transparent 35%
+    ),
+    #ffffff;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.agents-hero-content {
+  width: min(900px, 100%);
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.agents-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 20px;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.agents-label::before,
+.agents-label::after {
+  content: "";
+
+  width: 28px;
+  height: 1px;
+
+  background: #93c5fd;
+}
+
+.agents-hero h1 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.08;
+
+  letter-spacing: -2.5px;
+  font-weight: 800;
+}
+
+.agents-hero h1 span {
+  color: #2563eb;
+}
+
+.agents-hero p {
+  width: min(650px, 100%);
+
+  margin: 24px auto 0;
+
+  color: #6b7280;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.agents-section {
+  padding: 85px 24px 100px;
+}
+
+.agents-container {
+  width: min(1220px, 100%);
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.agents-heading {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-bottom: 42px;
+}
+
+.section-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #2563eb;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.agents-heading h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.15;
+
+  letter-spacing: -1.2px;
+}
+
+.agents-heading > p {
+  width: min(420px, 100%);
+
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   AGENTS GRID
+========================================= */
+
+.agents-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================
+   AGENT CARD
+========================================= */
+
+.agent-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  box-shadow:
+    0 5px 20px rgba(15, 23, 42, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.agent-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #dbeafe;
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.10);
+}
+
+
+/* =========================================
+   AGENT IMAGE
+========================================= */
+
+.agent-image {
+  position: relative;
+
+  width: 100%;
+  height: 320px;
+
+  overflow: hidden;
+
+  background: #e5e7eb;
+
+  border-radius: 0 !important;
+  clip-path: none !important;
+
+  flex-shrink: 0;
+}
+
+.agent-image img {
+  display: block;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 0 !important;
+  clip-path: none !important;
+
+  transition: transform 0.5s ease;
+}
+
+.agent-card:hover .agent-image img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   AVAILABLE BADGE
+========================================= */
+
+.agent-status {
+  position: absolute;
+
+  top: 16px;
+  left: 16px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 13px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-radius: 999px;
+
+  color: #16a34a;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.12);
+}
+
+.agent-status::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   AGENT CONTENT
+========================================= */
+
+.agent-content {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: 25px;
+}
+
+.agent-role {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #2563eb;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+}
+
+.agent-content h3 {
+  margin: 0 0 8px;
+
+  color: #111827;
+
+  font-size: 23px;
+  font-weight: 750;
+
+  letter-spacing: -0.4px;
+}
+
+.agent-location {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.agent-stats {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  margin: 23px 0;
+
+  border-top: 1px solid #edf0f4;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.agent-stats div {
+  padding: 16px 0;
+}
+
+.agent-stats div + div {
+  padding-left: 20px;
+
+  border-left: 1px solid #edf0f4;
+}
+
+.agent-stats strong {
+  display: block;
+
+  color: #111827;
+
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.agent-stats span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #9ca3af;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.agent-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.agent-email,
+.agent-properties {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 43px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.agent-email {
+  width: 82px;
+
+  border: 1px solid #dbeafe;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+.agent-email:hover {
+  background: #dbeafe;
+
+  transform: translateY(-1px);
+}
+
+.agent-properties {
+  flex: 1;
+
+  background: #111827;
+
+  color: #ffffff;
+}
+
+.agent-properties:hover {
+  background: #2563eb;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .agents-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agents-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .agents-heading > p {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .agents-hero {
+    padding: 120px 20px 75px;
+  }
+
+  .agents-hero h1 {
+    font-size: 42px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .agents-hero p {
+    font-size: 15px;
+  }
+
+  .agents-section {
+    padding: 60px 16px 70px;
+  }
+
+  .agents-grid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .agents-heading {
+    margin-bottom: 32px;
+  }
+
+  .agents-heading h2 {
+    font-size: 31px;
+  }
+
+  .agent-image {
+    height: 330px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+  .agents-hero h1 {
+    font-size: 36px;
+  }
+
+  .agent-image {
+    height: 300px;
+  }
+
+  .agent-content {
+    padding: 21px;
+  }
+}

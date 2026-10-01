@@ -1,0 +1,431 @@
+/* =========================================
+   MAP PAGE
+========================================= */
+
+.map-page {
+  background: #f8f7f4;
+  min-height: 100vh;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.map-header {
+  padding: 90px 24px 70px;
+
+  background:
+    linear-gradient(
+      rgba(17, 24, 39, 0.92),
+      rgba(17, 24, 39, 0.92)
+    ),
+    linear-gradient(135deg, #1f2937, #111827);
+
+  color: #ffffff;
+}
+
+.map-header-content {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.map-header span {
+  color: #c89b3c;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.map-header h1 {
+  margin-top: 14px;
+
+  color: #ffffff;
+
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.map-header h1 strong {
+  color: #c89b3c;
+}
+
+.map-header p {
+  max-width: 620px;
+
+  margin-top: 20px;
+
+  color: #d1d5db;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   MAP SECTION
+========================================= */
+
+.map-section {
+  max-width: 1200px;
+
+  margin: auto;
+  padding: 70px 24px;
+}
+
+.map-topbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.map-topbar span,
+.location-heading span {
+  color: #c89b3c;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.map-topbar h2 {
+  margin-top: 7px;
+
+  color: #111827;
+
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.property-count {
+  padding: 10px 16px;
+
+  border-radius: 30px;
+
+  background: #ffffff;
+
+  color: #374151;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
+}
+
+/* =========================================
+   MAP
+========================================= */
+
+.map-wrapper {
+  width: 100%;
+  height: 580px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #e5e7eb;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.12);
+
+  border: 1px solid #e5e7eb;
+}
+
+.estate-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================
+   POPUP
+========================================= */
+
+.map-popup {
+  min-width: 190px;
+
+  padding: 4px;
+}
+
+.map-popup h3 {
+  margin-bottom: 7px;
+
+  color: #111827;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.popup-location {
+  margin-bottom: 9px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.map-popup strong {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #c89b3c;
+
+  font-size: 15px;
+}
+
+.popup-button {
+  display: inline-block;
+
+  padding: 8px 12px;
+
+  border-radius: 6px;
+
+  background: #111827;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.popup-button:hover {
+  background: #c89b3c;
+}
+
+/* =========================================
+   LOCATION SECTION
+========================================= */
+
+.location-section {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 0 24px 90px;
+}
+
+.location-heading {
+  margin-bottom: 35px;
+}
+
+.location-heading h2 {
+  margin-top: 8px;
+
+  color: #111827;
+
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.location-heading p {
+  margin-top: 10px;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+/* =========================================
+   LOCATION CARDS
+========================================= */
+
+.location-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.location-card {
+  min-height: 110px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 22px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 5px 20px rgba(15, 23, 42, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #c89b3c;
+
+  box-shadow:
+    0 15px 35px rgba(15, 23, 42, 0.10);
+}
+
+.location-icon {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #faf7ef;
+
+  font-size: 25px;
+}
+
+.location-card h3 {
+  color: #111827;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.location-card p {
+  margin-top: 5px;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+}
+
+.location-arrow {
+  margin-left: auto;
+
+  color: #c89b3c;
+
+  font-size: 22px;
+
+  transition: transform 0.2s ease;
+}
+
+.location-card:hover .location-arrow {
+  transform: translateX(5px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .map-header {
+    padding: 70px 24px 55px;
+  }
+
+  .map-section {
+    padding-top: 50px;
+  }
+
+  .map-wrapper {
+    height: 500px;
+  }
+
+  .location-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .map-header {
+    padding: 55px 20px 45px;
+  }
+
+  .map-header h1 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+
+  .map-header p {
+    font-size: 15px;
+  }
+
+  .map-section {
+    padding: 45px 18px;
+  }
+
+  .map-topbar {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .map-topbar h2 {
+    font-size: 27px;
+  }
+
+  .map-wrapper {
+    height: 430px;
+
+    border-radius: 14px;
+  }
+
+  .location-section {
+    padding: 0 18px 60px;
+  }
+
+  .location-heading h2 {
+    font-size: 28px;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .location-card {
+    padding: 18px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 430px) {
+
+  .map-header h1 {
+    font-size: 34px;
+  }
+
+  .map-wrapper {
+    height: 380px;
+  }
+
+  .location-icon {
+    width: 46px;
+    height: 46px;
+
+    font-size: 21px;
+  }
+}
